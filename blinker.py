@@ -22,6 +22,6 @@ try:
         GPIO.output(20, GPIO.LOW)
         sleep(0.25)
 except KeyboardInterrupt:
-    GPIO.cleanup() #stop and clean when CTRL+C pressed
+    GPIO.cleanup() #stop and clean everything when CTRL+C pressed
 
 
