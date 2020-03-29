@@ -14,7 +14,7 @@ GPIO.setmode(GPIO.BCM)
 #Set pin as output
 GPIO.setup(20, GPIO.OUT)
 
-#Blink LED and sleep every 250ms, stop and clean when CTRL+C pressed
+#Blink LED and sleep every 250ms
 try:
     while 1:
         GPIO.output(20, GPIO.HIGH)
@@ -22,6 +22,6 @@ try:
         GPIO.output(20, GPIO.LOW)
         sleep(0.25)
 except KeyboardInterrupt:
-    GPIO.cleanup()
+    GPIO.cleanup() #stop and clean when CTRL+C pressed
 
 
